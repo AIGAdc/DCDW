@@ -1,29 +1,35 @@
 .site-footer {
-    align-items: center;
-    color: $black;
-    display: grid;
-    grid-gap: $spacing-16;
-    grid-template-columns: 1fr;
-    padding: $spacing-16;
     position: relative;
+    overflow: hidden;
 }
 
 .site-footer a {
-    color: $black;
+    color: var(--black);
     font-weight: 700;
     text-decoration: none;
 }
 
 .site-footer .svg-inline--fa {
-    font-size: $font-size-32;
+    font-size: var(--font-size-32);
 }
 
 .site-footer li {
     display: inline-block;
 }
 
-@media screen and (min-width: 1023px) {
-    .site-footer {
+.footer-content {
+    align-items: center;
+    border-top: solid 1px var(--black);
+    color: var(--black);
+    display: grid;
+    grid-gap: var(--space-16);
+    grid-template-columns: 1fr;
+    padding: var(--space-16);
+    position: relative;
+    z-index: 10;
+}
+@media screen and (min-width: 1280px) {
+    .footer-content {
         grid-template-columns: repeat(3, 1fr);
     }
 

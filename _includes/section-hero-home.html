@@ -1,0 +1,14 @@
+{% for content in page.hero %}
+{% if content.has-hero == true %}
+<section data-section="celeste" class="section-hero texture texture--paper">
+    <div class="container">
+        <figure class="hero-collage">
+            <img src="/uploads/hero-collage.png" alt="" />
+        </figure>
+    </div>
+    <div class="ripped-paper ripped-paper-1-B" style="fill: var(--dcdw-black);">
+        {% include textures/rip-2.svg %}
+    </div>
+</section>
+{% endif %}
+{% endfor %}

@@ -1,3 +1,7 @@
+.hero-collage {
+    mix-blend-mode: luminosity;
+}
+
 .hero-teaser {
     position: relative;
 }
@@ -18,7 +22,7 @@
 
 .hero-teaser .subtitle::after {
     content: "";
-    background-image: url(/uploads/hero-yellow-object.svg);
+    background-image: url("/uploads/hero-yellow-object.svg");
     position: absolute;
     width: 350px;
     top: -10px;
@@ -90,4 +94,24 @@
         margin-top: 56px;
         text-align: center;
     }
+}
+
+.hero-image {
+    display: none;
+}
+
+@media screen and (min-width: 960px) {
+    .hero-image {
+        // display: block;
+        position: absolute !important;
+        width: 800px;
+        transform: translateY(72px);
+        right: -80px;
+        bottom: 0;
+        height: 700px;
+        -webkit-transform: translateY(72px);
+        -moz-transform: translateY(72px);
+        -ms-transform: translateY(72px);
+        -o-transform: translateY(72px);
+}    
 }

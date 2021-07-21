@@ -3,16 +3,71 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    &--grit {
-        background-image: url('/uploads/texture-grit.png');
-        z-index: 100;
-    }
-    
     &--paper {
-        background-image: url('/uploads/texture-paper.png');
+        background-image: url("/uploads/texture-transparent-paper.png");
+    }
+}
+
+// Ripped Paper
+.ripped-paper {
+    position: absolute;
+    z-index: var(--index-9);
+}
+
+.ripped-paper-1-A {
+    top: -48px;
+}
+
+.ripped-paper-1-B {
+    bottom: -48px;
+}
+
+@media screen and (min-width: 640px) {
+    .ripped-paper-1-A {
+        top: -40px;
     }
 
-    &--wheatpaste {
-        background-image: url('/uploads/texture-wheatpaste.png');
+    .ripped-paper-1-B {
+        bottom: -40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .ripped-paper-1-A {
+        top: -32px;
+    }
+
+    .ripped-paper-1-B {
+        bottom: -32px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .ripped-paper-1-A {
+        top: -24px;
+    }
+
+    .ripped-paper-1-B {
+        bottom: -24px;
+    }
+}
+
+@media screen and (min-width: 1180px) {
+    .ripped-paper-1-A {
+        top: -16px;
+    }
+
+    .ripped-paper-1-B {
+        bottom: -16px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .ripped-paper-1-A {
+        top: -8px;
+    }
+
+    .ripped-paper-1-B {
+        bottom: -8px;
     }
 }

@@ -1,62 +1,64 @@
-.site-header {
+header {
     align-items: center;
-    background-color: $dcdw-2021-celeste;
-    border-bottom: solid 4px $black;
+    background-color: var(--dcdw-2021-celeste);
+    border-bottom: solid 1px var(--black);
+    color: var(--black);
     display: grid;
-    grid-gap: $spacing-16;
+    grid-gap: var(--space-16);
     grid-template-columns: max-content max-content;
     justify-content: space-between;
     mix-blend-mode: unset !important;
-    padding: $spacing-16;
-    z-index: $index-4;
+    padding: var(--space-16);
+    position: sticky;
+    top: 0;
+    z-index: var(--index-10);
 }
 
-.site-header__logo svg {
+header svg {
     display: block;
+    fill: var(--black);
 }
 
-.site-header__navigation a {
-    color: $black;
+header nav a {
+    color: var(--black);
     font-weight: 700;
-    padding: $spacing-8;
+    padding: var(--space-8);
     text-decoration: none;
 }
 
-.site-header__navigation a:hover {
-    color: $dcdw-2021-cinnabar;
+header nav a:hover {
+    color: var(--dcdw-2021-cinnabar);
 }
 
-.site-header__navigation .link:not(:last-child) {
-    margin-right: $spacing-16;
+header nav .link:not(:last-child) {
+    margin-right: var(--space-16);
 }
 
-.site-header__navigation,
-.site-header__cta {
+header nav {
     display: none;
 }
 
 @media screen and (min-width: 960px) {
-    .site-header__navigation ul li {
+    header nav ul li {
         display: inline-block;
     }
 }
 
-@media screen and (min-width: 1023px) {
-    .site-header {
+@media screen and (min-width: 1280px) {
+    header {
         align-items: center;
         display: grid;
         grid-template-columns: max-content 1fr max-content;
-        grid-gap: $spacing-32;
+        grid-gap: var(--space-32);
     }
 
-    .site-header__navigation,
-    .site-header__cta {
+    header nav {
         display: block;
     }
 
     // show site navigation when screen is > 1023
-    .site-header__navigation {
-        gap: $spacing-32;
+    header nav {
+        gap: var(--space-32);
         text-align: right;
     }
 

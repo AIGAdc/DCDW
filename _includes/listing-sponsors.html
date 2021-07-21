@@ -1,0 +1,75 @@
+{% if page.url == "/" or "/about/" %}
+
+<section data-section="purple" id="sponsors" class="section section-sponsors background-black color-dcdw-2021-celeste texture texture--paper">
+    <div class="container">
+        <div class="flow-2">
+            <h2 class="" id="Replace with Variable">
+                H2: Sponsors
+            </h2>
+            <hr class="divider divider--yellow">
+            <div class="wysiwyg">
+                P: Sponsors Body Text
+            </div>
+        </div>
+
+        {% comment %} tier 1 {% endcomment %}
+        <div class="gap-top-1000">
+            <h3 id="Replace with Variable">
+                H3: {{ site.sponsors.tier-one-header }}
+            </h3>
+            <!-- <div class="wysiwyg">
+                {{ site.sponsors.body | markdownify }}
+            </div> -->
+            <ul class="gap-top-500 grid grid--two-column">
+                {% assign sorted = site.sponsors.sponsor-tier-one | sort: 'aria-label' %}
+                {% for content in sorted %}
+                {% include card-sponsor.html %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        {% comment %} tier 2 {% endcomment %}
+        <div class="gap-top-500">
+            <h3 id="Replace with Variable">
+                H3: {{ site.sponsors.tier-two-header }}
+            </h3>
+            <!-- <div class="wysiwyg">
+                {{ site.sponsors.body | markdownify }}
+            </div> -->
+            <ul class="gap-top-500 grid grid--four-column">
+                {% assign sorted = site.sponsors.sponsor-tier-two | sort: 'aria-label' %}
+                {% for content in sorted %}
+                {% include card-sponsor.html %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        {% if page.url == "/about/" %}
+        {% comment %} tier 3 {% endcomment %}
+        <div class="gap-top-500">
+            <h3 id="Replace with Variable">
+                H3: {{ site.sponsors.tier-three-header }}
+            </h3>
+            <!-- <div class="wysiwyg">
+                    {{ site.sponsors.body | markdownify }}
+                </div> -->
+            <ul class="gap-top-500 grid grid--four-column">
+                {% assign sorted = site.sponsors.sponsor-tier-three | sort: 'aria-label' %}
+                {% for content in sorted %}
+                {% include card-sponsor.html %}
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if page.url == "/" %}
+        <div class="gap-top-1000">
+            <a class="button button-solid--yellow" href="{{ page.sponsors-button-url }}">
+                {{ page.sponsors-button-label}}
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+{% endif %}

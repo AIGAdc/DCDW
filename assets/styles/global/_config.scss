@@ -1,0 +1,172 @@
+/// BASE SIZE
+/// All calculations are based on this. It’s recommended that
+/// you keep it at 1rem because that is the root font size. You
+/// can set it to whatever you like and whatever unit you like.
+///
+$gorko-base-size: 1.25rem;
+
+/// SIZE SCALE
+/// This is a Major Third scale that powers all the utilities that
+/// it is relevant for (font-size, margin, padding). All items are
+/// calcuated off the base size, so change that and cascade across
+/// your whole project.
+///
+$gorko-size-scale: (
+    "000": 0.25rem !important, // 4px
+    "100": 0.5rem !important, // 8px
+    "200": 1rem !important, // 16px
+    "300": 1.125rem !important, // 18px
+    "400": 1.5rem !important, // 24px
+    "500": 2rem !important, // 32px
+    "600": 2.5rem !important, // 40px
+    "700": 3rem !important, // 48px
+    "800": 3.5rem !important, // 56px
+    "900": 4rem !important, // 64px
+    "1000": 4.5rem !important, // 72px
+    "1100": 5rem !important, // 80px
+    "1200": 5.5rem !important, // 88px
+    "1300": 6rem !important, // 96px
+    "1400": 6.5rem !important, // 104px
+    "1500": 7rem !important, // 112px
+    "1600": 7.5rem !important, // 120px
+);
+
+/// COLORS
+/// Colors are shared between backgrounds and text by default.
+/// You can also use them to power borders, fills or shadows, for example.
+///
+$gorko-colors: (
+    "white": #ffffff !important,
+    "black": #000000 !important,
+    "green": #4ae725 !important,
+    "dcdw-2016": #0000ff !important,
+    "dcdw-2017": #3e07d0 !important,
+    "dcdw-2018": #297b76 !important,
+    "dcdw-2019": #fb7eb8 !important,
+    "dcdw-2020": #4ae725 !important,
+    "dcdw-2021-yellow": #ffff00 !important,
+    "dcdw-2021-cinnabar": #ec1001 !important,
+    "dcdw-2021-celeste": #ecece5 !important,
+    "dcdw-2021-purple": #ac7aff !important,
+    "dcdw-2021-beige": #D1D1C5 !important
+);
+
+/// CORE CONFIG
+/// This powers everything from utility class generation to breakpoints
+/// to enabling/disabling pre-built components/utilities.
+///
+$gorko-config: (
+    "background": (
+        "items": $gorko-colors,
+        "output": "standard",
+        "property": "background-color",
+    ),
+    "color": (
+        "items": $gorko-colors,
+        "output": "standard",
+        "property": "color",
+    ),
+    "box": (
+        "items": (
+            "block": "block",
+            "flex": "flex",
+            "grid": "grid",
+            "hide": "none",
+            "show": "inherit",
+        ),
+        "output": "responsive",
+        "property": "display",
+    ),
+    "font": (
+        "items": (
+            "base": "Helvetica, Arial, sans-serif",
+        ),
+        "output": "standard",
+        "property": "font-family",
+    ),
+    "gap-top": (
+        "items": $gorko-size-scale,
+        "output": "standard",
+        "property": "margin-top",
+    ),
+    "gap-right": (
+        "items": $gorko-size-scale,
+        "output": "standard",
+        "property": "margin-right",
+    ),
+    "gap-bottom": (
+        "items": $gorko-size-scale,
+        "output": "standard",
+        "property": "margin-bottom",
+    ),
+    "gap-left": (
+        "items": $gorko-size-scale,
+        "output": "standard",
+        "property": "margin-left",
+    ),
+    "pad-top": (
+        "items": $gorko-size-scale,
+        "output": "standard",
+        "property": "padding-top",
+    ),
+    "pad-right": (
+        "items": $gorko-size-scale,
+        "output": "standard",
+        "property": "padding-right",
+    ),
+    "pad-bottom": (
+        "items": $gorko-size-scale,
+        "output": "standard",
+        "property": "padding-bottom",
+    ),
+    "pad-left": (
+        "items": $gorko-size-scale,
+        "output": "standard",
+        "property": "padding-left",
+    ),
+    "layer": (
+        "items": (
+            "100": 100,
+            "200": 200,
+            "300": 300,
+            "400": 400,
+            "500": 500,
+            "600": 600,
+            "700": 700,
+            "800": 800,
+            "900": 900,
+            "1000": 1000,
+        ),
+        "output": "standard",
+        "property": "z-index",
+    ),
+    "text": (
+        "items": $gorko-size-scale,
+        "output": "responsive",
+        "property": "font-size",
+    ),
+    "weight": (
+        "items": (
+            "light": "300",
+            "regular": "400",
+            "bold": "700",
+        ),
+        "output": "standard",
+        "property": "font-weight",
+    ),
+    "width": (
+        "items": (
+            "full": "100%",
+            "half": percentage(1/2),
+            "quarter": percentage(1/4),
+            "third": percentage(1/3),
+        ),
+        "output": "responsive",
+        "property": "width",
+    ),
+    "breakpoints": (
+        "sm": "(min-width: 36em)",
+        "md": "(min-width: 48em)",
+        "lg": "(min-width: 62em)",
+    ),
+);
